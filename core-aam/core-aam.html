@@ -1809,9 +1809,7 @@ var mappingTableLabels = {
                   <th>[ARIA 1.1] <a class="property-reference" href="#aria-details"><code>aria-details</code></a></th>
                   <td>
 		   <p>IAccessible2: </p>
-                    <ul>
-                      <li>Expose pointer to the accessible object in <code>IA2_RELATION_DETAILS</code>                      </li>
-                  </ul>
+		   <p>If the referenced object is in the accessibility tree, expose a pointer to the accessible object using <code>IA2_RELATION_DETAILS</code>, and expose reverse relations as described in <a href="#mapping_additional_relations">Relations</a>.</p>
 		  </td>
                   <td>TBD.</td>
                   <td>
@@ -1857,10 +1855,7 @@ var mappingTableLabels = {
                   <th>[ARIA 1.1]  <a class="property-reference" href="#aria-errormessage"><code>aria-errormessage</code></a></th>
                   <td>
                   <p>IAccessible2: </p>
-                    <ul>
-                      <li>Expose pointer to the accessible object in <code>IA2_RELATION_ERROR_MESSAGE</code></li>
-                      <li>Expose reverse relations as described in <a href="#mapping_additional_relations">Relations</a>.</li>
-		    </ul>
+                   <p>If the referenced object is in the accessibility tree, expose a pointer to the accessible object using <code>IA2_RELATION_ERROR_MESSAGE</code>, and expose reverse relations as described in <a href="#mapping_additional_relations">Relations</a>.</p>
 		  </td>
                   <td>Expose pointer to the target accessible object using <code>ControllerFor</code> property.</td>
                   <td>
@@ -2594,6 +2589,17 @@ var mappingTableLabels = {
                   <td><code>IA2_RELATION_DESCRIPTION_FOR</code></td>
                   <td><code>RELATION_DESCRIPTION_FOR</code></td>
                 </tr>
+                <tr>
+                  <th><a class="property-reference" href="#aria-details"><code>aria-details</code></a> references the element's ID</th>
+                  <td><code>IA2_RELATION_DETAILS_FOR</code></td>
+                  <td><code>RELATION_DETAILS_FOR</code></td>
+                </tr>
+                <tr>
+                  <th><a class="property-reference" href="#aria-errormessage"><code>aria-errormessage</code></a> references the element's ID</th>
+                  <td><code>IA2_RELATION_ERROR_FOR</code></td>
+                  <td><code>RELATION_ERROR_FOR</code></td>
+                </tr>
+
                 <tr>
                   <th><a class="property-reference" href="#aria-flowto"><code>aria-flowto</code></a> references the element's ID</th>
                   <td><code>IA2_RELATION_FLOW_FROM</code></td>
